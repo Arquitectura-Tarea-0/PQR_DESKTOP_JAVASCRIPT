@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Crear PQR</title>
+	<link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+</head>
+<body>
+	<div id="principal">
+		<div id = "formulario">
+			<form action= "" class= "form">
+				<p>
+					<label for='asunto'>Asunto</label>
+					<input id='asunto' name='asunto' required type='text'>
+				</p>
+				<label for="tSolicitud">Tipo de solicitud: </label>
+				<select name="tSolicitud" id="tSolicitud">
+					<option value="Pregunta">Pregunta</option>
+					<option value="Queja">Queja</option>
+					<option value="Reclamo">Reclamo</option>
+				</select>
+				<p>
+					<textarea class='textarea' cols='50' id='cuerpo' name='cuerpo' required rows='4'></textarea>
+				</p>
+				<p>
+					<input type='submit' value='Enviar'>
+				</p>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

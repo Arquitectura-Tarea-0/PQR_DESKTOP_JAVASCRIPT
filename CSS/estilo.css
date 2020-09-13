@@ -1,0 +1,39 @@
+#principal{
+	width: auto;
+	height: 610px;
+	margin: auto;
+}
+
+header{
+	width: auto;
+	height: 100px;
+	font-size: 35px;
+	font-family: "Rubik";
+	background-color: #E5E5E5;
+	padding: 20px;
+}
+
+body{
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:visited {
+  color: grey;
+  background-color: transparent;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
