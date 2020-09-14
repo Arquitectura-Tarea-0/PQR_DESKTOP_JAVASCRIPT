@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mis PQR</title>
+	<link rel="stylesheet" href="../CSS/miPQR.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script>
+		  $( function() {
+		    $( ".datepicker" ).datepicker();
+		  } );
+	 </script>
+</head>
+<body>
+	<table>
+		<tr>
+			<th class="TableTitle" colspan="5">PQRs</th>
+		</tr>
+		<tr>
+			<th class="TableTitle1">Tipo de solicitud</th>
+			<th class="TableTitle1">Estado de solicitud</th>
+			<th class="TableTitle1" colspan="3">Fecha de creacion</th>
+		</tr>
+		<tr>
+			<th>
+				<select>
+					<option>Solicitud</option>
+					<option>Queja</option>
+					<option>Reclamo</option>
+				</select>
+			</th>
+			<th>
+				<select>
+					<option>Radicado</option>
+					<option>En proceso</option>
+					<option>Resuelto</option>
+					<option>Cerrado</option>
+				</select>
+			</th>
+			<th>Despues de <input type="text" class="datepicker"></th>
+			<th> - </th>
+			<th>Antes de <input type="text" class="datepicker"></th>
+		</tr>
+		<hr>
+		<hr>
+		<tr>
+			<th>Asunto</th>
+			<th>Tipo</th>
+			<th>Estado</th>
+			<th>Creado el</th>
+			<th></th>
+		</tr>
+		<tr></tr>
+	</table>
+</body>
+</html>
