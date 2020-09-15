@@ -1,1 +1,0 @@
-- win = new electron.BrowserWindow ({width: 1000, height: 800, resizable:false}) nueva ventana de 800x1000 no modificable

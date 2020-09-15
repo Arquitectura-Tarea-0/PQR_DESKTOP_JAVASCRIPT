@@ -2,55 +2,73 @@
 <html>
 <head>
 	<title>Mis PQR</title>
-	<link rel="stylesheet" href="../CSS/miPQR.css">
+	<link rel="stylesheet" href="../CSS/misPQR.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+	<div id="header"></div>
+	<table id="table1" class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th class="TableTittle" colspan="5">PQRs</th>
+			</tr>
+			<tr>
+				<th class="TableTittle1">Tipo de solicitud</th>
+				<th class="TableTittle1">Estado de solicitud</th>
+				<th class="TableTittle2" colspan="3">Fecha de creacion</th>
+			</tr>
+			<tr>
+				<th>
+					<select class="form-control">
+						<option>Solicitud</option>
+						<option>Queja</option>
+						<option>Reclamo</option>
+					</select>
+				</th>
+				<th>
+					<select class="form-control">
+						<option>Radicado</option>
+						<option>En proceso</option>
+						<option>Resuelto</option>
+						<option>Cerrado</option>
+					</select>
+				</th>
+				<th class="fechita">Despues de <input type="text" class="datepicker" id="datefrom"></th>
+				<th class="fechita">Antes de <input type="text" class="datepicker" id="dateto"></th>
+				<th></th>
+			</tr>
+			<tr>
+				<th>Asunto</th>
+				<th>Tipo</th>
+				<th>Estado</th>
+				<th>Creado el</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+			<tr></tr>
+		</tbody>
+		
+	</table>
+
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   	<script>
-		  $( function() {
-		    $( ".datepicker" ).datepicker();
-		  } );
+		$( function() {
+			$( ".datepicker" ).datepicker({
+				changeMonth: true,
+				changeYear: true,
+				inline: true,
+			    showOtherMonths: true,
+			    dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+			});
+		} );
 	 </script>
-</head>
-<body>
-	<table>
-		<tr>
-			<th class="TableTitle" colspan="5">PQRs</th>
-		</tr>
-		<tr>
-			<th class="TableTitle1">Tipo de solicitud</th>
-			<th class="TableTitle1">Estado de solicitud</th>
-			<th class="TableTitle1" colspan="3">Fecha de creacion</th>
-		</tr>
-		<tr>
-			<th>
-				<select>
-					<option>Solicitud</option>
-					<option>Queja</option>
-					<option>Reclamo</option>
-				</select>
-			</th>
-			<th>
-				<select>
-					<option>Radicado</option>
-					<option>En proceso</option>
-					<option>Resuelto</option>
-					<option>Cerrado</option>
-				</select>
-			</th>
-			<th>Despues de <input type="text" class="datepicker"></th>
-			<th> - </th>
-			<th>Antes de <input type="text" class="datepicker"></th>
-		</tr>
-		<hr>
-		<hr>
-		<tr>
-			<th>Asunto</th>
-			<th>Tipo</th>
-			<th>Estado</th>
-			<th>Creado el</th>
-			<th></th>
-		</tr>
-		<tr></tr>
-	</table>
+	 <script type="text/javascript">
+	 	$( function() {
+			$( "#header" ).load("header.html");
+		});
+	 </script>
 </body>
 </html>

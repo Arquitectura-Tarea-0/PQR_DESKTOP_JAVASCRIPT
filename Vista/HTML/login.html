@@ -3,20 +3,8 @@
 
 <head>
 	<title>PQRs</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
 	<link rel="stylesheet" href="../CSS/style.css" type="text/css" media="all" />
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-	 rel="stylesheet">
+	<script src="../JS/login.js"></script>
 </head>
 
 <body>
@@ -32,7 +20,7 @@
 	          <a href="index.html#registrarse" class="btn btn-light">Registrarse</a>
 	        </div>
 	        <div class="form-inline">
-	          <a href="index.html" class="btn btn-light">Iniciar Sesión</a>
+	          <a class="btn btn-light">Iniciar Sesión</a>
 	        </div>
 	    </div>
 	  </nav>
@@ -43,19 +31,30 @@
 				<div class="top-content-style">
 					<img src="https://envia.co/images/letter-pqr2.png" alt="" />
 				</div>
-				<form action="#" method="post">
+				<form>
 					<a class="legend">Ingresa tus datos para iniciar sesión</a>
 					<div class="input">
-						<input type="password" placeholder="Correo" name="email" required />
+						<input id="mail" type="text" placeholder="Correo"/>
 					</div>
 					<div class="input">
-						<input type="password" placeholder="Contraseña" name="password" required />
+						<input id="pass" type="password" placeholder="Contraseña"/>
 					</div>
-					<button type="submit" class="btn btn-light2"><a>Iniciar Sesión</a></button>
+					<button type="submit" class="btn btn-light2" onclick="login()"><a>Iniciar Sesión</a></button>
 				</form>
 			</div>
 		</div>
 		<!-- //content -->
 	</div>
+
+	
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
 </body>
 </html>
