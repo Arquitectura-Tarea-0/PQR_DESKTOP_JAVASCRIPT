@@ -1,7 +1,8 @@
 #principal{
 	width: auto;
-	height: 610px;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
+	float: middle;
 }
 
 header{
@@ -31,9 +32,26 @@ a:visited {
   margin-right: 10px;
 }
 
+textarea {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
 .alignleft {
 	float: left;
 }
 .alignright {
+	float: right;
+}
+
+.addTittle{
+	margin: 0;
+	display: inline-block;
+}
+
+.addAnot{
+	background-color: grey; 
+	width: auto; 
 	float: right;
 }
