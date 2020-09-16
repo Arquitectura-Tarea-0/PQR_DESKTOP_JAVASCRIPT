@@ -6,7 +6,7 @@ async function login() {
     alert("Todos los espacios deben llenarse");
     return false;
   }else{
-    var useruwu = post(user, pass);
+    var useruwu = await post(user, pass);
   }  
 }
 
@@ -29,20 +29,6 @@ async function post(u, p){
       alert("HTTP-Error: " + response.status);
     }
     console.log(pjson);
-}
 
-async function get(){
-    let response = await fetch("https://pqr-api-rails.herokuapp.com/users");
-    
-    if (response.ok) {
-      var json = await response.json();      
-    } else {
-      alert("HTTP-Error: " + response.status);
-    }
-    var l = json.users.lenght;
-    for (var i = l - 1; i >= 0; i--) {
-        if(json.users[i].email == user && json.users[i].password_digest == user){
-            //redirigir a mis PQR
-        }
-    }
+    console.log("Valido");
 }
