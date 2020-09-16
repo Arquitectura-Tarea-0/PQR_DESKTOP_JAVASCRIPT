@@ -1,6 +1,6 @@
 #principal{
-	padding-top: 1em;
 	width: auto;
+	height: 100px;
 	margin: auto;
 }
 
@@ -15,10 +15,6 @@ header{
 
 body{
 	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
-}
-
-h2 {
-	text-align: center;
 }
 
 a:link {
@@ -40,9 +36,4 @@ a:visited {
 }
 .alignright {
 	float: right;
-}
-
-panel-default {
-	border: 1;
-	background-color: red;
 }
