@@ -27,7 +27,7 @@ async function post(u, p){
       alert("Bienvenido de nuevo " + pjson.user.name);  
 
         probarsesion(pjson.token, pjson.user, pjson);
-        window.location="../HTML/misPQR.html"; 
+        window.location="../HTML/crearPQR.html"; 
         
         
     } else {
