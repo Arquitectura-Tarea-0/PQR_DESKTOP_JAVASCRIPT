@@ -7,42 +7,30 @@
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
-	<div id="header"></div>
 	<div class="row" id="principal">
 		<div class="col-sm-6 align-items-center">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					Nueva Solicitud
+					<h2>Información de la solicitud</h2>
 				</div>
 				<div class="panel-body">
 					<div class="form-group">
-						<label for="asunto">Asunto</label>
-						<input type="text" id="asunto" class="form-control" />
-						<label for="tSolicitud">Tipo de Solicitud</label>
-						<select name="tSolicitud" id="tSolicitud" class="form-control">
-							<option value="Pregunta">Pregunta</option>
-							<option value="Queja">Queja</option>
-							<option value="Reclamo">Reclamo</option>
-						</select>
+						<label for="asunto">Asunto</label><br>
+						<label for="tSolicitud">Tipo</label><br>
+						<label for="estado">Estado</label><br>
+						<label for="descripcion">Descripcion</label><br>
 					</div>
 					<div class="form-group">
-						<label for="cuerpo">¿En que le podemos ayudar?</label>
-						<br>
-						<textarea class='textarea' cols='50' id='cuerpo' name='cuerpo' class="form-control"></textarea>
+						<h2 class="addTittle">Anotaciones</h2><button type="button" id="updateSolicitud" class="btn btn-primary form-control addAnot" onclick="onclick();">
+						+
+						</button>
 					</div>
 				</div>
-				<div class="panel-footer">
-					<div class="row">
-						<div class="col-xs-12">
-							<button type="button" id="updateButton" class="btn btn-primary form-control" onclick="updateClick();" style="background-color: red">
-							Enviar
-							</button>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
+<<<<<<< Updated upstream:crearPQR.html
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	 <script type="text/javascript">
@@ -50,5 +38,7 @@
 			$( "#header" ).load("header.html");
 		});
 	 </script>
+=======
+>>>>>>> Stashed changes:Vista/HTML/solicitud.html
 </body>
 </html>
