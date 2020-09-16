@@ -5,7 +5,7 @@
   "scripts": {
     "start": "electron Vista/JS/main.js"
   },
-  "author": "",
+  "author": "1151212-1151378-1151508",
   "license": "ISC",
   "dependencies": {
     "electron": "^10.1.1"

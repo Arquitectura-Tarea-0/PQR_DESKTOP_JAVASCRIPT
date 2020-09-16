@@ -28,7 +28,7 @@ async function post(n, u, p){
     if (response.ok) {
       var pjson = await response.json();    
       alert("Usuario registrado con exito");
-
+      window.location="../HTML/login.html";
     } else {
       alert("HTTP-Error: " + response.status);
     }
