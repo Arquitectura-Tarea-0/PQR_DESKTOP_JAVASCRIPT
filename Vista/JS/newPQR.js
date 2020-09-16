@@ -1,5 +1,3 @@
-var user = sessionStorage.getItem("token");
-
 async function regPQR() {
     let subject = document.getElementById("asunto").value;
     let request_type = document.getElementById("tSolicitud").value;
@@ -20,7 +18,7 @@ async function postPQR(s, r, d){
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
-        'Authorization': user
+        'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.JC6qKuH9SG0SIiYSfhZUFTtirxN9Q47buLk0DPFFFzE'
       },
       body: JSON.stringify({
                 user_id: 8,
@@ -31,5 +29,10 @@ async function postPQR(s, r, d){
             })
     });
 
-    alert("Hola boris");
+    if (response.ok) {
+      var pjson = await response.json();    
+      alert("PQR creada con exito");  
+    } else {
+      alert("HTTP-Error: " + response.status);
+    }
 }
