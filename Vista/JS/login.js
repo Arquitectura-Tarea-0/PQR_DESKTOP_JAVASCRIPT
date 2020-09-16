@@ -23,20 +23,22 @@ async function post(u, p){
     });
 
     if (response.ok) {
-      var pjson = await response.json();    
-      alert("Bienvenido de nuevo " + pjson.user.name);  
+      var pjson = await response.json();
+      if (pjson.error) {
+        alert("Usuario o Contraseña incorrectos");
+      }else{
+        alert("Bienvenido de nuevo " + pjson.user.name);
 
         probarsesion(pjson.token, pjson.user, pjson);
-        window.location="../HTML/misPQR.html"; 
-        
-        
+        window.location="../HTML/misPQR.html";
+      }
     } else {
       alert("HTTP-Error: " + response.status);
     }
 }
 
-async function probarsesion(t, u , p) {
-  sessionStorage.setItem("token", t);
+async function probarsesion(t) {
 
+  sessionStorage.setItem("token", t);
   console.log(t);
 }

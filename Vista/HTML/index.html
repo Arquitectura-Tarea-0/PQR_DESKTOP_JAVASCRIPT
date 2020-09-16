@@ -10,7 +10,6 @@
 
 <body>
 	<div class="main-bg">
-
 	<section class="w3l-bootstrap-header">
 	  <nav class="navbar navbar-expand-lg navbar-light bg-primary py-lg-2 py-2 px-sm-0 px-2">
 	    <div class="container">
@@ -22,7 +21,6 @@
 	        </div>
 	        <div class="form-inline">
 	          <a href="login.html" class="btn btn-light">Iniciar Sesión</a>
-	          <a href="misPQR.html">uwu</a>
 	        </div>
 	    </div>
 	  </nav>
@@ -44,12 +42,24 @@
 					<div class="input">
 						<input type="password" placeholder="Contraseña" id="pass"/>
 					</div>
-					<button type="button" class="btn btn-light2" onclick="signup()"><a>Registrarse</a></button>
+					<button id="bclnr" type="button" class="btn btn-light2" onclick="signup()"><a>Registrarse</a></button>
 				</form>
 			</div>
 		</div>
 		<!-- //content -->
 	</div>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+  			$('#bclnr').click(function() {
+    		$('input[type="text"]').val('');
+    		$('input[type="email"]').val('');
+    		$('input[type="password"]').val('');
+  			});
+		});
+    </script>
 
 	<script type="text/javascript">
 		addEventListener("load", function () {

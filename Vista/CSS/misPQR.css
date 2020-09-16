@@ -3,7 +3,7 @@
 }
 
 th.TableTittle{
-	font-size: 3em;
+	font-size: 2.5em;
 	text-align: center;
 }
 
@@ -37,4 +37,5 @@ table#table1{
   	margin-right: auto;
 	width: 800px;
 }
+
 

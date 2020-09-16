@@ -4,11 +4,11 @@
 <head>
 	<title>Solicitud</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href=".../CSS/estilo.css">
 </head>
 <body>
 	<div class="row" id="principal">
-		<div class="col-sm-6 align-items-center">
+		<div class="col-sm-6 mx-auto">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h2>Información de la solicitud</h2>
@@ -16,14 +16,19 @@
 				<div class="panel-body">
 					<div class="form-group">
 						<label for="asunto">Asunto</label><br>
+						<p id="asunto"></p>
 						<label for="tSolicitud">Tipo</label><br>
+						<p id="tSolicitud"></p>
 						<label for="estado">Estado</label><br>
+						<p id="estado"></p>
 						<label for="descripcion">Descripcion</label><br>
+						<p id="descripcion"></p>
 					</div>
 					<div class="form-group">
-						<h2 class="addTittle">Anotaciones</h2><button type="button" id="updateSolicitud" class="btn btn-primary form-control addAnot" onclick="onclick();">
+						<h2 class="addTittle" style="display: inline;">Anotaciones</h2><button type="button" id="updateSolicitud" class="btn btn-primary form-control addAnot" style="background-color: grey; width: auto; float: right;" onclick="addNote();">
 						+
 						</button>
+						<p id="anotaciones"></p>
 					</div>
 				</div>
 				
@@ -32,6 +37,7 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script type="text/javascript" src="../JS/solicitud.js"></script>
 	 <script type="text/javascript">
 	 	$( function() {
 			$( "#header" ).load("header.html");

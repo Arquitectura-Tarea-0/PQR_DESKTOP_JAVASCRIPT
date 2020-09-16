@@ -35,19 +35,30 @@
 				<form>
 					<a class="legend">Ingresa tus datos para iniciar sesión</a>
 					<div class="input">
-						<input id="mail" type="text" placeholder="Correo"/>
+						<input type="email" placeholder="Correo" id="mail"/>
 					</div>
 					<div class="input">
-						<input id="pass" type="password" placeholder="Contraseña"/>
+						<input type="password" placeholder="Contraseña" id="pass"/>
 					</div>
-					<button type="button" class="btn btn-light2" onclick="login()"><a>Iniciar Sesión</a></button>
+					<button id="bclnr" type="button" class="btn btn-light2" onclick="login()"><a>Iniciar Sesión</a></button>
 				</form>
 			</div>
 		</div>
 		<!-- //content -->
 	</div>
 
-	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+		$(document).ready(function() {
+  			$('#bclnr').click(function() {
+    		$('input[type="email"]').val('');
+    		$('input[type="password"]').val('');
+  			});
+		});
+    </script>
+
 	<script>
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
