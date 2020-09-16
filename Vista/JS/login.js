@@ -6,7 +6,7 @@ async function login() {
     alert("Todos los espacios deben llenarse");
     return false;
   }else{
-    var useruwu = await post(user, pass);
+    await post(user, pass);
   }  
 }
 
@@ -25,10 +25,18 @@ async function post(u, p){
     if (response.ok) {
       var pjson = await response.json();    
       alert("Bienvenido de nuevo " + pjson.user.name);  
+
+        probarsesion(pjson.token, pjson.user, pjson);
+        window.location="../HTML/misPQR.html"; 
+        
+        
     } else {
       alert("HTTP-Error: " + response.status);
     }
-    console.log(pjson);
+}
 
-    console.log("Valido");
+async function probarsesion(t, u , p) {
+  sessionStorage.setItem("token", t);
+
+  console.log(t);
 }

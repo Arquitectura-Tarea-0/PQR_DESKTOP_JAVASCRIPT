@@ -7,7 +7,7 @@ async function signup() {
     alert("Todos los espacios deben llenarse");
     return false;
   }else{
-    var useruwu = await post(name, user, pass);
+    await post(name, user, pass);
   }  
 }
 
@@ -28,6 +28,7 @@ async function post(n, u, p){
     if (response.ok) {
       var pjson = await response.json();    
       alert("Usuario registrado con exito");
+
     } else {
       alert("HTTP-Error: " + response.status);
     }
