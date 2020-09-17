@@ -1,15 +1,53 @@
 {
-  "name": "npm",
+  "name": "pqr",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Prueba de instalador del programa",
+  "main": "Vista/JS/main.js",
   "scripts": {
-    "start": "electron Vista/JS/main.js"
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "electron-builder"
   },
   "author": "1151212-1151378-1151508",
-  "license": "ISC",
-  "dependencies": {
-    "electron": "^10.1.1"
+  "license": "MIT",
+  "build": {
+    "appId": "PQRv1",
+    "asar": true,
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
   },
-  "devDependencies": {},
-  "description": ""
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arquitectura-Tarea-0/PQR_DESKTOP_JAVASCRIPT.git"
+  },
+  "keywords": [
+    "PQR"
+  ],
+  "bugs": {
+    "url": "https://github.com/Arquitectura-Tarea-0/PQR_DESKTOP_JAVASCRIPT/issues"
+  },
+  "homepage": "https://github.com/Arquitectura-Tarea-0/PQR_DESKTOP_JAVASCRIPT#readme"
 }
