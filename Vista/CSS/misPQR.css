@@ -20,9 +20,12 @@ th.TableTittle2{
 	width: 600px;
 }
 
-th.fechita{
-	font-size: 0.8em;
+input.datepicker{
+	font-size: 1em;
 	text-align: center;
+	border-radius: 5px;
+	border: 1px solid #d4d4d4;
+	height: 2.4em;
 }
 
 th.datepicker{
@@ -38,4 +41,14 @@ table#table1{
 	width: 800px;
 }
 
+button.btn-secondary{
+	font-size: 0.8em;
+	text-align: center;
+}
+
+#filtros{
+	background-color: #d4d4d4; 
+	border-radius: 12px;
+	border: 2px solid #ff0066;
+}
 

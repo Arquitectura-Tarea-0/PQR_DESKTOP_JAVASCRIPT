@@ -21,23 +21,26 @@
 			</tr>
 			<tr>
 				<th>
-					<select class="form-control">
-						<option>Solicitud</option>
-						<option>Queja</option>
-						<option>Reclamo</option>
+					<select class="form-control" id="type">
+						<option></option>
+						<option value="request">Solicitud</option>
+						<option value="complain">Queja</option>
+						<option value="claim">Reclamo</option>
 					</select>
 				</th>
 				<th>
-					<select class="form-control">
-						<option>Radicado</option>
-						<option>En proceso</option>
-						<option>Resuelto</option>
-						<option>Cerrado</option>
+					<select class="form-control" id="state">
+						<option></option>
+						<option value="settled">Radicado</option>
+						<option value="in_progress">En proceso</option>
+						<option value="solved">Resuelto</option>
+						<option value="closed">Cerrado</option>
 					</select>
 				</th>
-				<th class="fechita">Despues de <input type="text" class="datepicker" id="datefrom"></th>
-				<th class="fechita">Antes de <input type="text" class="datepicker" id="dateto"></th>
-				<th></th>
+				<th colspan="2" class="fechita"> <input type="text" class="datepicker" id="date" readonly></th>
+				<th rowspan="2" id="celFiltro"><button class='btn btn-secondary' onclick="filtrar()">Filtrar<i class='fa fa-filter' aria-hidden='true'></i></button></th>
+			</tr>
+			<tr id="filtros">
 			</tr>
 			<tr>
 				<th>Asunto</th>
@@ -59,6 +62,7 @@
   	<script>
 		$( function() {
 			$( ".datepicker" ).datepicker({
+				dateFormat: 'dd/mm/yy',
 				changeMonth: true,
 				changeYear: true,
 				inline: true,

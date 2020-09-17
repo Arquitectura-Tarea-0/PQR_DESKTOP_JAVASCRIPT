@@ -16,14 +16,16 @@ async function get(){
     } else {
       alert("HTTP-Error: " + response.status);
     }
-    console.log(aux);
-    var owo = "";
-    //recorrer el json
-    for (var i = 0; i < aux.length; i++) {
-    	owo += "<tr><td>" + aux[i].subject + "</td> <td>" + traducir(aux[i].request_type) + "</td> <td>" + traducir(aux[i].request_state) + "</td> <td>" + traducir(aux[i].created_at) + "</td><td><button id="+ i  +" class='btn btn-dark'onClick='subir(this.id)'><i class='fa fa-eye' aria-hidden='true'></i></button></td></tr>";
-    }
-   
+    
+    charge(aux);
+}
 
+function charge(a){
+  var owo = "";
+    //recorrer el json
+    for (var i = 0; i < a.length; i++) {
+      owo += "<tr><td>" + a[i].subject + "</td> <td>" + traducir(a[i].request_type) + "</td> <td>" + traducir(a[i].request_state) + "</td> <td>" + traducir(a[i].created_at) + "</td><td><button id="+ i +" class='btn btn-dark'onClick='subir(this.id)'><i class='fa fa-eye' aria-hidden='true'></i></button></td></tr>";
+    }
     document.getElementById("tbody").innerHTML = owo;
 }
 
@@ -57,7 +59,60 @@ function traducir(s){
 	}
 }
 
+function filtrar(){
+  var fecha = document.getElementById("date").value;
+  var estado = document.getElementById("state").value;
+  var tipo = document.getElementById("type").value;
+  
+  if (fecha != "" || estado != "" || tipo != "") {
+    
+    var str = "<button class='btn btn-danger' onclick='erase()''>Reiniciar filtros<i class='fa fa-window-close' aria-hidden='true'></i></button>";
+    document.getElementById("celFiltro").innerHTML = str;
+    str = "<td>"+ tipo + "</td> <td>"+ estado + "</td><td></td><td>"+fecha+"</td>";
+    document.getElementById("filtros").innerHTML = str;
+    clear();
+    filtrar2(fecha, estado, tipo);
+  }
+}
+
+function filtrar2(f, e, t){
+    let arr = aux;
+
+    if (t != "") {
+      arr = arr.filter(function checkType(request){
+        return request.request_type == t;
+      });
+    }
+    if (e != "") {
+      arr = arr.filter(function checkState(request){
+        return request.request_state == e;
+      });
+    }
+    if (f != "") {
+      arr = arr.filter(function checkDate(request){
+        return traducir(request.created_at) == f;
+      });
+    }
+
+    charge(arr);
+}
+
+function erase(){
+   var str = "<button class='btn btn-secondary' onclick='filtrar()''>Filtrar<i class='fa fa-filter' aria-hidden='true'></i></button>";
+   document.getElementById("celFiltro").innerHTML = str;
+   document.getElementById("filtros").innerHTML = "";
+   get();
+   clear();
+}
+
+
+function clear(){
+  document.getElementById("date").value = "";
+  document.getElementById("state").value = "";
+  document.getElementById("type").value = "";
+}
+
 function subir(id){
-	sessionStorage.setItem("request", JSON.stringify(aux[id]));
-	window.location="../HTML/solicitud.html"; 
+  sessionStorage.setItem("request", JSON.stringify(aux[id]));
+  window.location="../HTML/solicitud.html"; 
 }
