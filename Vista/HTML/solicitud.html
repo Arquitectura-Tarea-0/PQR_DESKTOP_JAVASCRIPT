@@ -25,9 +25,15 @@
 						<p id="descripcion"></p>
 					</div>
 					<div class="form-group">
-						<h2 class="addTittle" style="display: inline;">Anotaciones</h2><button type="button" id="updateSolicitud" class="btn btn-primary form-control addAnot" style="background-color: grey; width: auto; float: right;" onclick="addNote();">
-						+
-						</button>
+						<h2 class="addTittle" style="display: inline;">Anotaciones</h2><button type="button" id="updateSolicitud" class="btn btn-primary form-control addAnot" style="background-color: grey; width: auto; float: right;">+</button>
+						<div id="popup" class="modal">
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<p>Ingrese el contenido de la nota</p>
+								<textarea class='textarea' cols='50' id='Cnota' name='Cnota' class="form-control"></textarea>
+								<button type="button" id="agregarNota" class="btn btn-primary" style="width: auto;" onclick="addNote();">Enviar</button>
+							</div>
+						</div>
 						<p id="anotaciones"></p>
 					</div>
 				</div>
@@ -35,13 +41,16 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="../JS/loadPQR.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  	<script type="text/javascript" src="../JS/solicitud.js"></script>
 	 <script type="text/javascript">
 	 	$( function() {
 			$( "#header" ).load("header.html");
 		});
-	 </script>
+	</script>
+	<script type="text/javascript">
+    	loadPQRinfo();
+  	</script>
 </body>
 </html>
